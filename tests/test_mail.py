@@ -1,9 +1,10 @@
-import unittest
+from nose.tools import ok_
+from unittest.mock import MagicMock
 from mail import Mail
 
 
-class TestMail(unittest.TestCase):
-    def setUp(self):
+class TestMail:
+    def setup(self):
         self.mail = Mail()
         self.mail.from_address = 'test1@test.com'
         self.mail.to_address = 'test2@test.com'
@@ -11,20 +12,27 @@ class TestMail(unittest.TestCase):
         self.mail.message = 'message'
 
     def test_valid(self):
-        self.assertTrue(self.mail.valid())
+        ok_(self.mail.valid())
 
     def test_valid_from_address(self):
         self.mail.from_address = None
-        self.assertFalse(self.mail.valid())
+        ok_(not self.mail.valid())
 
     def test_valid_to_address(self):
         self.mail.to_address = None
-        self.assertFalse(self.mail.valid())
+        ok_(not self.mail.valid())
 
     def test_valid_subject(self):
         self.mail.subject = None
-        self.assertFalse(self.mail.valid())
+        ok_(not self.mail.valid())
 
     def test_valid_message(self):
         self.mail.message = None
-        self.assertFalse(self.mail.valid())
+        ok_(not self.mail.valid())
+
+    def test_with_syntax(self):
+        with Mail(MagicMock()) as mail:
+            mail.from_address = "test1@test.com"
+            mail.to_address = 'test2@test.com'
+            mail.subject = 'subject'
+            mail.message = 'message'

@@ -1,6 +1,6 @@
 from nose.tools import ok_
 from unittest.mock import MagicMock
-from mail import Mail
+from app.mail import Mail
 
 
 class TestMail:

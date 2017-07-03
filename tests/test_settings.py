@@ -12,11 +12,11 @@ class TestSettings:
         eq_(settings.env(), expect)
 
     def test_local_secret_key(self):
-        expect = '12345678901234567890123456789012'
+        expect = '1234567890123456'
         eq_(settings.secret_key(), expect)
 
     def test_prod_secret_key(self):
-        expect = '09876543210987654321098765432109'
+        expect = '0987654321098765'
         os.environ['ENV'] = 'prod'
         os.environ['SECRET_KEY'] = expect
 

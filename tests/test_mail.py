@@ -36,3 +36,7 @@ class TestMail:
             mail.to_address = 'test2@test.com'
             mail.subject = 'subject'
             mail.message = 'message'
+
+    def test_with_syntax_invalid_user(self):
+        with Mail(MagicMock()):
+            pass

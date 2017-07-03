@@ -7,6 +7,6 @@ def env():
 
 def secret_key():
     if env() == 'local':
-        return '12345678901234567890123456789012'
+        return '1234567890123456'
     else:
         return os.getenv('SECRET_KEY')

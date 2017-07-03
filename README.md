@@ -1,2 +1,2 @@
 # send-mail-bot
-[![Build Status](https://travis-ci.org/raba-jp/send-mail-bot.svg?branch=master)](https://travis-ci.org/raba-jp/send-mail-bot)
+[![Build Status](https://travis-ci.org/raba-jp/send-mail-bot.svg?branch=master)](https://travis-ci.org/raba-jp/send-mail-bot) [![Code Climate](https://codeclimate.com/github/raba-jp/send-mail-bot/badges/gpa.svg)](https://codeclimate.com/github/raba-jp/send-mail-bot) [![Coverage](https://codeclimate.com/github/raba-jp/send-mail-bot/badges/coverage.svg)](https://codeclimate.com/github/raba-jp/send-mail-bot/coverage)
